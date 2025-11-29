@@ -1,0 +1,28 @@
+<% 
+const pageTitle = t.challenges.title;
+const body = `
+  <section class="container">
+    <h1 class="section-title">${t.challenges.title}</h1>
+    <div class="grid grid-3">
+      ${challenges.map(challenge => `
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">${challenge.title[lang]}</h3>
+            <div style="display: flex; gap: 0.5rem; margin-top: 0.5rem; flex-wrap: wrap;">
+              <span class="badge badge-${challenge.difficulty}">${t.challenges[challenge.difficulty]}</span>
+              <span class="badge badge-xp">+${challenge.xpReward} XP</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <p>${challenge.description[lang]}</p>
+          </div>
+          <a href="/challenge/${challenge.id}?lang=${lang}" class="btn btn-primary" style="width: 100%;">
+            ${t.challenges.start_challenge}
+          </a>
+        </div>
+      `).join('')}
+    </div>
+  </section>
+`;
+%>
+<%- include('layout', { pageTitle, body, t, lang }) %>

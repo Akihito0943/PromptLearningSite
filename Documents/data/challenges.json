@@ -1,0 +1,138 @@
+[
+  {
+    "id": 1,
+    "title": {
+      "ja": "基本の質問プロンプト",
+      "en": "Basic Question Prompt"
+    },
+    "description": {
+      "ja": "AIに対して明確な質問をするプロンプトを作成してください。良いプロンプトは具体的で、文脈を含み、期待する回答の形式を指定しています。",
+      "en": "Create a prompt that asks a clear question to the AI. Good prompts are specific, include context, and specify the expected response format."
+    },
+    "goal": {
+      "ja": "「Pythonでリストをソートする方法」について、初心者にもわかりやすく説明してもらうプロンプトを作成する",
+      "en": "Create a prompt to explain 'how to sort a list in Python' in a beginner-friendly way"
+    },
+    "difficulty": "beginner",
+    "xpReward": 50
+  },
+  {
+    "id": 2,
+    "title": {
+      "ja": "役割を指定したプロンプト",
+      "en": "Role-Based Prompt"
+    },
+    "description": {
+      "ja": "AIに特定の役割や専門性を持たせることで、より適切な回答を引き出すことができます。「あなたは〜です」という形式で役割を明示しましょう。",
+      "en": "By assigning a specific role or expertise to the AI, you can elicit more appropriate responses. Use phrases like 'You are...' to clarify the role."
+    },
+    "goal": {
+      "ja": "AIを「経験豊富なデータサイエンティスト」として、機械学習モデルの評価指標について説明してもらう",
+      "en": "Have the AI act as an 'experienced data scientist' to explain machine learning model evaluation metrics"
+    },
+    "difficulty": "beginner",
+    "xpReward": 50
+  },
+  {
+    "id": 3,
+    "title": {
+      "ja": "ステップバイステップ思考",
+      "en": "Step-by-Step Thinking"
+    },
+    "description": {
+      "ja": "複雑な問題を解決する際、AIに段階的に考えさせることで、より正確な回答が得られます。「ステップバイステップで考えて」などの指示を含めましょう。",
+      "en": "For complex problems, asking the AI to think step-by-step leads to more accurate answers. Include instructions like 'think step-by-step'."
+    },
+    "goal": {
+      "ja": "数学の文章問題を解く際に、AIに各ステップを説明させながら解答させるプロンプトを作成する",
+      "en": "Create a prompt that has the AI explain each step while solving a math word problem"
+    },
+    "difficulty": "intermediate",
+    "xpReward": 75
+  },
+  {
+    "id": 4,
+    "title": {
+      "ja": "出力フォーマットの指定",
+      "en": "Specifying Output Format"
+    },
+    "description": {
+      "ja": "AIの出力を特定のフォーマット（JSON、Markdown、表など）で受け取ることで、後続の処理が容易になります。明確に形式を指定しましょう。",
+      "en": "Receiving AI output in a specific format (JSON, Markdown, tables, etc.) makes subsequent processing easier. Clearly specify the format."
+    },
+    "goal": {
+      "ja": "プログラミング言語の特徴を比較し、結果をMarkdownの表形式で出力させるプロンプトを作成する",
+      "en": "Create a prompt to compare programming language features and output the results in a Markdown table format"
+    },
+    "difficulty": "intermediate",
+    "xpReward": 75
+  },
+  {
+    "id": 5,
+    "title": {
+      "ja": "Few-Shot学習プロンプト",
+      "en": "Few-Shot Learning Prompt"
+    },
+    "description": {
+      "ja": "いくつかの例を示すことで、AIに期待する出力のパターンを学習させることができます。入力と出力のペアを2-3個提示しましょう。",
+      "en": "By providing examples, you can teach the AI the expected output pattern. Present 2-3 input-output pairs."
+    },
+    "goal": {
+      "ja": "感情分析タスクで、例文とその感情ラベル（ポジティブ/ネガティブ/中立）を示し、新しい文を分類させるプロンプトを作成する",
+      "en": "Create a prompt for sentiment analysis that shows example sentences with emotion labels (positive/negative/neutral) and classifies new sentences"
+    },
+    "difficulty": "intermediate",
+    "xpReward": 100
+  },
+  {
+    "id": 6,
+    "title": {
+      "ja": "制約条件の明確化",
+      "en": "Clarifying Constraints"
+    },
+    "description": {
+      "ja": "出力の長さ、使用する言語レベル、避けるべき内容などの制約を明確に指定することで、期待通りの結果が得られます。",
+      "en": "By clearly specifying constraints such as output length, language level, and content to avoid, you can get the expected results."
+    },
+    "goal": {
+      "ja": "技術記事の要約を、200文字以内、中学生でも理解できる言葉で作成させるプロンプトを作る",
+      "en": "Create a prompt to summarize a technical article in under 200 characters using language understandable by middle school students"
+    },
+    "difficulty": "advanced",
+    "xpReward": 100
+  },
+  {
+    "id": 7,
+    "title": {
+      "ja": "チェーン・オブ・ソート",
+      "en": "Chain-of-Thought"
+    },
+    "description": {
+      "ja": "複雑な推論タスクでは、AIに思考プロセスを明示的に示させることで精度が向上します。「理由を説明しながら」などの指示を使いましょう。",
+      "en": "For complex reasoning tasks, having the AI explicitly show its thought process improves accuracy. Use instructions like 'explain your reasoning'."
+    },
+    "goal": {
+      "ja": "論理パズルを解く際に、各推論ステップとその根拠を明示させるプロンプトを作成する",
+      "en": "Create a prompt that makes the AI show each reasoning step and its basis when solving a logic puzzle"
+    },
+    "difficulty": "advanced",
+    "xpReward": 125
+  },
+  {
+    "id": 8,
+    "title": {
+      "ja": "実践：コードレビュー",
+      "en": "Practical: Code Review"
+    },
+    "description": {
+      "ja": "実際のエンジニアリング業務を想定したシナリオです。コードレビューを依頼するプロンプトを作成してください。",
+      "en": "A scenario assuming actual engineering work. Create a prompt to request a code review."
+    },
+    "goal": {
+      "ja": "セキュリティ、パフォーマンス、可読性の観点からコードをレビューし、具体的な改善案を提示させるプロンプトを作成する",
+      "en": "Create a prompt to review code from security, performance, and readability perspectives and provide specific improvement suggestions"
+    },
+    "difficulty": "advanced",
+    "xpReward": 150
+  }
+]

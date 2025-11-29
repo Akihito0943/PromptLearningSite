@@ -1,0 +1,48 @@
+<% 
+const pageTitle = t.leaderboard.title;
+const body = `
+  <section class="container">
+    <h1 class="section-title">${t.leaderboard.title}</h1>
+    
+    ${leaderboard && leaderboard.length > 0 ? `
+      <div class="leaderboard-table">
+        <table>
+          <thead>
+            <tr>
+              <th>${t.leaderboard.rank}</th>
+              <th>${t.leaderboard.username}</th>
+              <th>${t.leaderboard.level}</th>
+              <th>${t.leaderboard.total_xp}</th>
+              <th>${t.leaderboard.completed}</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${leaderboard.map(player => `
+              <tr>
+                <td>
+                  ${player.rank <= 3 
+                    ? `<span class="rank-medal rank-${player.rank}">${player.rank}</span>` 
+                    : player.rank}
+                </td>
+                <td><strong>${player.username}</strong></td>
+                <td>Lv. ${player.level}</td>
+                <td>${player.totalXP} XP</td>
+                <td>${player.completedChallenges}</td>
+              </tr>
+            `).join('')}
+          </tbody>
+        </table>
+      </div>
+    ` : `
+      <div class="card text-center">
+        <p style="color: var(--text-light);">No players yet. Be the first to complete a challenge!</p>
+      </div>
+    `}
+    
+    <div class="text-center mt-3">
+      <a href="/challenges?lang=${lang}" class="btn btn-primary">${t.challenges.title}</a>
+    </div>
+  </section>
+`;
+%>
+<%- include('layout', { pageTitle, body, t, lang }) %>

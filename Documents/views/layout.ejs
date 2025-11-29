@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="<%= lang %>">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= typeof pageTitle !== 'undefined' ? pageTitle + ' - ' : '' %><%= t.site.name %></title>
+  <meta name="description" content="<%= t.site.tagline %>">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/?lang=<%= lang %>" class="logo">
+        <div class="logo-icon">🎮</div>
+        <%= t.site.name %>
+      </a>
+      <ul class="nav-menu">
+        <li><a href="/?lang=<%= lang %>"><%= t.nav.home %></a></li>
+        <li><a href="/challenges?lang=<%= lang %>"><%= t.nav.challenges %></a></li>
+        <li><a href="/leaderboard?lang=<%= lang %>"><%= t.nav.leaderboard %></a></li>
+        <li><a href="/profile?lang=<%= lang %>"><%= t.nav.profile %></a></li>
+        <li class="lang-switcher">
+          <a href="?lang=ja" class="<%= lang === 'ja' ? 'active' : '' %>">日本語</a>
+          <a href="?lang=en" class="<%= lang === 'en' ? 'active' : '' %>">English</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <%- body %>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p><%= t.footer.copyright %></p>
+    </div>
+  </footer>
+
+  <script>
+    // Pass translations to JavaScript
+    window.translations = <%- JSON.stringify(t) %>;
+    window.currentLang = '<%= lang %>';
+  </script>
+  <script src="/js/main.js"></script>
+</body>
+</html>

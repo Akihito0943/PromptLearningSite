@@ -1,0 +1,73 @@
+<% 
+const pageTitle = t.profile.title;
+const body = `
+  <section class="container">
+    <h1 class="section-title">${t.profile.title}</h1>
+    
+    <!-- Profile Stats -->
+    <div class="profile-stats">
+      <div class="stat-card">
+        <div class="stat-value">${user.level}</div>
+        <div class="stat-label">${t.profile.level}</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">${user.totalXP}</div>
+        <div class="stat-label">${t.profile.total_xp}</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">${user.completedChallenges.length}</div>
+        <div class="stat-label">${t.profile.completed_challenges}</div>
+      </div>
+    </div>
+    
+    <!-- Recent Submissions -->
+    <div class="card">
+      <h2 class="card-title">${t.profile.recent_submissions}</h2>
+      
+      ${user.submissions && user.submissions.length > 0 ? `
+        <div style="overflow-x: auto;">
+          <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+              <tr style="border-bottom: 2px solid var(--border-color);">
+                <th style="padding: 0.75rem; text-align: left;">${t.profile.challenge_id}</th>
+                <th style="padding: 0.75rem; text-align: left;">${t.profile.score}</th>
+                <th style="padding: 0.75rem; text-align: left;">${t.profile.xp}</th>
+                <th style="padding: 0.75rem; text-align: left;">${t.profile.date}</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${user.submissions.slice().reverse().slice(0, 10).map(submission => `
+                <tr style="border-bottom: 1px solid var(--border-color);">
+                  <td style="padding: 0.75rem;">
+                    <a href="/challenge/${submission.challengeId}?lang=${lang}" style="color: var(--primary-color); text-decoration: none;">
+                      Challenge #${submission.challengeId}
+                    </a>
+                  </td>
+                  <td style="padding: 0.75rem;">
+                    <span style="font-weight: 600;">${submission.score}/100</span>
+                  </td>
+                  <td style="padding: 0.75rem;">
+                    <span class="badge badge-xp">+${submission.xp} XP</span>
+                  </td>
+                  <td style="padding: 0.75rem; color: var(--text-light);">
+                    ${new Date(submission.timestamp).toLocaleString(lang === 'ja' ? 'ja-JP' : 'en-US')}
+                  </td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        </div>
+      ` : `
+        <p style="color: var(--text-light); text-align: center; padding: 2rem;">
+          ${t.profile.no_submissions}
+        </p>
+      `}
+    </div>
+    
+    <div class="text-center mt-3">
+      <a href="/challenges?lang=${lang}" class="btn btn-primary">${t.challenges.title}</a>
+    </div>
+  </section>
+`;
+%>
+<%- include('layout', { pageTitle, body, t, lang }) %>

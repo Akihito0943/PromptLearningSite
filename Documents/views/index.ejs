@@ -1,0 +1,99 @@
+<% 
+const pageTitle = t.nav.home;
+const body = `
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>${t.home.hero_title}</h1>
+      <p>${t.home.hero_subtitle}</p>
+      <a href="/challenges?lang=${lang}" class="btn btn-primary">${t.home.start_button}</a>
+    </div>
+  </section>
+
+  <!-- Featured Challenges -->
+  <section class="container">
+    <h2 class="section-title">${t.home.featured_challenges}</h2>
+    <div class="grid grid-3">
+      ${challenges.map(challenge => `
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">${challenge.title[lang]}</h3>
+            <div style="display: flex; gap: 0.5rem; margin-top: 0.5rem;">
+              <span class="badge badge-${challenge.difficulty}">${t.challenges[challenge.difficulty]}</span>
+              <span class="badge badge-xp">+${challenge.xpReward} XP</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <p>${challenge.description[lang]}</p>
+          </div>
+          <a href="/challenge/${challenge.id}?lang=${lang}" class="btn btn-primary" style="width: 100%;">
+            ${t.challenges.start_challenge}
+          </a>
+        </div>
+      `).join('')}
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="container how-it-works">
+    <h2 class="section-title">${t.home.how_it_works}</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h3>${t.home.step1_title}</h3>
+        <p>${t.home.step1_desc}</p>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <h3>${t.home.step2_title}</h3>
+        <p>${t.home.step2_desc}</p>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <h3>${t.home.step3_title}</h3>
+        <p>${t.home.step3_desc}</p>
+      </div>
+      <div class="step">
+        <div class="step-number">4</div>
+        <h3>${t.home.step4_title}</h3>
+        <p>${t.home.step4_desc}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Top Players Preview -->
+  ${leaderboard && leaderboard.length > 0 ? `
+    <section class="container">
+      <h2 class="section-title">${t.leaderboard.title}</h2>
+      <div class="leaderboard-table">
+        <table>
+          <thead>
+            <tr>
+              <th>${t.leaderboard.rank}</th>
+              <th>${t.leaderboard.username}</th>
+              <th>${t.leaderboard.level}</th>
+              <th>${t.leaderboard.total_xp}</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${leaderboard.slice(0, 3).map(player => `
+              <tr>
+                <td>
+                  ${player.rank <= 3 ? `<span class="rank-medal rank-${player.rank}">${player.rank}</span>` : player.rank}
+                </td>
+                <td>${player.username}</td>
+                <td>${player.level}</td>
+                <td>${player.totalXP}</td>
+              </tr>
+            `).join('')}
+          </tbody>
+        </table>
+      </div>
+      <div class="text-center mt-3">
+        <a href="/leaderboard?lang=${lang}" class="btn btn-secondary">${t.leaderboard.title}</a>
+      </div>
+    </section>
+  ` : ''}
+`;
+%>
+<%- include('layout', { pageTitle, body, t, lang }) %>

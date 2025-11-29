@@ -1,0 +1,79 @@
+{
+  "site": {
+    "name": "PromptQuest",
+    "tagline": "Learn Prompt Skills Through Games"
+  },
+  "nav": {
+    "home": "Home",
+    "challenges": "Challenges",
+    "leaderboard": "Leaderboard",
+    "profile": "Profile",
+    "language": "言語"
+  },
+  "home": {
+    "hero_title": "Master Prompt Skills Like a Game",
+    "hero_subtitle": "A fun learning platform for AI prompt engineering",
+    "start_button": "Get Started",
+    "featured_challenges": "Featured Challenges",
+    "how_it_works": "How It Works",
+    "step1_title": "Choose a Challenge",
+    "step1_desc": "Various difficulty levels from beginner to advanced",
+    "step2_title": "Create a Prompt",
+    "step2_desc": "Read the task and submit your optimal prompt",
+    "step3_title": "AI Evaluates Instantly",
+    "step3_desc": "AI scores your prompt and provides feedback",
+    "step4_title": "Earn XP",
+    "step4_desc": "Gain XP based on your score and level up"
+  },
+  "challenges": {
+    "title": "Challenges",
+    "difficulty": "Difficulty",
+    "xp_reward": "XP Reward",
+    "start_challenge": "Start",
+    "beginner": "Beginner",
+    "intermediate": "Intermediate",
+    "advanced": "Advanced"
+  },
+  "challenge_detail": {
+    "title": "Challenge Details",
+    "description": "Description",
+    "goal": "Goal",
+    "difficulty": "Difficulty",
+    "xp_reward": "XP Reward",
+    "your_prompt": "Your Prompt",
+    "prompt_placeholder": "Enter your prompt here...",
+    "submit": "Submit",
+    "submitting": "Evaluating...",
+    "result_title": "Evaluation Result",
+    "score": "Score",
+    "xp_earned": "XP Earned",
+    "feedback": "Feedback",
+    "strengths": "Strengths",
+    "improvements": "Improvements",
+    "try_again": "Try Again",
+    "next_challenge": "Next Challenge"
+  },
+  "leaderboard": {
+    "title": "Leaderboard",
+    "rank": "Rank",
+    "username": "Username",
+    "level": "Level",
+    "total_xp": "Total XP",
+    "completed": "Completed"
+  },
+  "profile": {
+    "title": "My Profile",
+    "level": "Level",
+    "total_xp": "Total XP",
+    "completed_challenges": "Completed Challenges",
+    "recent_submissions": "Recent Submissions",
+    "challenge_id": "Challenge ID",
+    "score": "Score",
+    "xp": "XP",
+    "date": "Date",
+    "no_submissions": "No submissions yet"
+  },
+  "footer": {
+    "copyright": "© 2024 PromptQuest. All rights reserved."
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "site": {
+    "name": "PromptQuest",
+    "tagline": "ゲーム形式でプロンプトスキルを学習"
+  },
+  "nav": {
+    "home": "ホーム",
+    "challenges": "チャレンジ",
+    "leaderboard": "ランキング",
+    "profile": "マイページ",
+    "language": "Language"
+  },
+  "home": {
+    "hero_title": "プロンプトスキルをゲーム感覚で習得",
+    "hero_subtitle": "AIプロンプトのスキルを楽しく学べる学習プラットフォーム",
+    "start_button": "今すぐ始める",
+    "featured_challenges": "注目のチャレンジ",
+    "how_it_works": "使い方",
+    "step1_title": "チャレンジを選ぶ",
+    "step1_desc": "初級から上級まで様々な難易度のチャレンジが用意されています",
+    "step2_title": "プロンプトを作成",
+    "step2_desc": "課題を読んで、最適なプロンプトを考えて提出します",
+    "step3_title": "AIが即座に評価",
+    "step3_desc": "提出したプロンプトをAIが採点し、フィードバックを返します",
+    "step4_title": "XPを獲得",
+    "step4_desc": "スコアに応じてXP(経験値)を獲得し、レベルアップします"
+  },
+  "challenges": {
+    "title": "チャレンジ一覧",
+    "difficulty": "難易度",
+    "xp_reward": "獲得XP",
+    "start_challenge": "挑戦する",
+    "beginner": "初級",
+    "intermediate": "中級",
+    "advanced": "上級"
+  },
+  "challenge_detail": {
+    "title": "チャレンジ詳細",
+    "description": "説明",
+    "goal": "目標",
+    "difficulty": "難易度",
+    "xp_reward": "獲得XP",
+    "your_prompt": "あなたのプロンプト",
+    "prompt_placeholder": "ここにプロンプトを入力してください...",
+    "submit": "提出する",
+    "submitting": "評価中...",
+    "result_title": "評価結果",
+    "score": "スコア",
+    "xp_earned": "獲得XP",
+    "feedback": "フィードバック",
+    "strengths": "良かった点",
+    "improvements": "改善点",
+    "try_again": "もう一度挑戦",
+    "next_challenge": "次のチャレンジ"
+  },
+  "leaderboard": {
+    "title": "ランキング",
+    "rank": "順位",
+    "username": "ユーザー名",
+    "level": "レベル",
+    "total_xp": "総XP",
+    "completed": "達成数"
+  },
+  "profile": {
+    "title": "マイページ",
+    "level": "レベル",
+    "total_xp": "総XP",
+    "completed_challenges": "達成したチャレンジ",
+    "recent_submissions": "最近の提出",
+    "challenge_id": "チャレンジID",
+    "score": "スコア",
+    "xp": "XP",
+    "date": "日時",
+    "no_submissions": "まだ提出がありません"
+  },
+  "footer": {
+    "copyright": "© 2024 PromptQuest. All rights reserved."
+  }
+}
